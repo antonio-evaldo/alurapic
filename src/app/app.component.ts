@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'alurapic';
+  description = 'Gon Freecs';
+  url = 'https://cdn.myanimelist.net/images/characters/11/174517.jpg';
 }

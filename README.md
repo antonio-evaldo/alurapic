@@ -1,3 +1,14 @@
+# Angular parte 1: Fundamentos
+
+## Módulo 1
+
+- Instalação do Angular CLI
+- Criação de um novo projeto com a ferramenta e como executá-lo
+- Compreensão da estrutura criada
+- Data binding através de Angular Expression
+- Data binding de atributos
+- Convenções adotadas até o momento
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
