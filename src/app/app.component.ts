@@ -6,7 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'alurapic';
-  description = 'Gon Freecs';
-  url = 'https://cdn.myanimelist.net/images/characters/11/174517.jpg';
+
+  photos = [
+    {
+      url: 'https://cdn.myanimelist.net/images/characters/11/174517.jpg',
+      description: 'Gon Freecs'
+    },
+    {
+      url: 'https://cdn.myanimelist.net/images/characters/2/327920.jpg',
+      description: 'Killua Zoldyck'
+    },
+  ];
+
 }
