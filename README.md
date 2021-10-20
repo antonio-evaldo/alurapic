@@ -74,11 +74,26 @@ Perceba que todos os cards aqui seriam iguais, pois seus atributos estão *hard 
 ## Módulo 2
 
 - Como o arquivo `bootstrap.css` pode ser adicionado ao processo de *build* do Angular CLI.
+
+É adicionado com `npm install bootstrap@4.1.1` no caso desse projeto. Em seguida, indicar o caminho do arquivo bootstrap no arquivo `angular.json` da raiz do projeto, adicionando na lista em **projects > alurapic > architect > build > styles**.
+
 - Criação de um novo componente
 - A importância de declarar o componente em um módulo
+
+Criamos uma pasta com o arquivo `nomeDoModulo.module.ts` e colocamos junto com as pastas dos componentes que farão parte desse módulo. Um módulo também é uma classe, mas que declaramos com o decorator `@NgModule`, onde podemos configurar quais componentes serão visíveis entre si (`declarations`) e quais iremos exporta para serem visíveis fora do módulo (`exports`). Podemos também indicar quais módulos queremos importar (`imports`).
+
 - Como passar dados para o componente através das *inbound properties*
 - Criação de um módulo e boas práticas
 - A diretiva `*ngFor`
+
+## Módulo 3
+
+- Consumir uma Web API através do serviço `HttpClient`
+- Injeção de dependência e a importância de *providers*
+- Isolamento da lógica de acesso à Web API em classe de serviço
+- Tipagem do retorno da API através de interface e sua vantagem
+- Componentes possuem ciclo de vida
+- A fase `OnInit`
 
 # Alurapic
 
