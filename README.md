@@ -91,9 +91,25 @@ Criamos uma pasta com o arquivo `nomeDoModulo.module.ts` e colocamos junto com a
 - Consumir uma Web API através do serviço `HttpClient`
 - Injeção de dependência e a importância de *providers*
 - Isolamento da lógica de acesso à Web API em classe de serviço
+
+Devemos criar um **serviço** para receber um parâmetro do tipo `HttpClient` no construtor, e esse serviço é uma classe que recebe o *decorator* `@Injectable`. No serviço, criamos métodos que retornam objetos do tipo `Observable`, que será diferente dependendo se a requisição foi do tipo GET, POST, etc.
+
 - Tipagem do retorno da API através de interface e sua vantagem
 - Componentes possuem ciclo de vida
 - A fase `OnInit`
+
+## Módulo 4
+
+- `BrowserModule` vs `CommonModule`
+
+Só podemos importar o `BrowserModule` no `app.module.ts`. Esse módulo já inclui o `CommomModule`, que é o que traz as diretivas como `ngFor` e `ngIf`. Ao criar um novo componente, é boa prática já importarmos o `CommonModule`.
+
+- Single Page Application e rotas no lado do navegador
+- O módulo `RouterModule`
+- A diretiva `router-outlet` como grande lacuna para exibição de outros componentes
+- Módulo de rotas e definição de rotas
+- Como lidar com páginas 404
+- Parametrizando rotas e como obter valores do segmento parametrizado
 
 # Alurapic
 
