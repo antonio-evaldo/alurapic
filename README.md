@@ -111,6 +111,13 @@ Só podemos importar o `BrowserModule` no `app.module.ts`. Esse módulo já incl
 - Como lidar com páginas 404
 - Parametrizando rotas e como obter valores do segmento parametrizado
 
+## Módulo 5
+
+- Novo componente para listar photos
+- Adequação dos dados recebidos pelo componente
+- Quando a fase `OnInit` não é suficiente
+- A interface `OnChanges`, e como interagir com `SimpleChanges`
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.

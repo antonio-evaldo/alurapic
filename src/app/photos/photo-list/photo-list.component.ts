@@ -25,6 +25,7 @@ export class PhotoListComponent implements OnInit {
       .listFromUser(userName)
       .subscribe(photos => {
         this.photos = photos
+        console.log(photos);
       });
   }
 
