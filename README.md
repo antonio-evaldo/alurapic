@@ -118,6 +118,23 @@ Só podemos importar o `BrowserModule` no `app.module.ts`. Esse módulo já incl
 - Quando a fase `OnInit` não é suficiente
 - A interface `OnChanges`, e como interagir com `SimpleChanges`
 
+## Módulo 6
+
+- Binding de eventos
+- Implementação de *Pipe*
+- *Resolvers* e como integrá-lo no Roteamento
+- `RxJS` e o `Subject`
+- Aplicando *debounce* para otimização da aplicação
+
+Importamos o `Subject` do `RxJS` e no `PhotoList` criamos uma propriedade `debounce` do tipo `Subject<string>`. O `debounce` irá tratar o dado que digitamos no campo de filtro, nesse caso aplicando um *debounce* de 300ms. O dado é enviado a partir de `debounce.next()` no *event binding* do input e é recebido em `debounce.pipe().subscribe()`, que configuramos no `ngOnInit` do componente.
+
+- Utilizando novamente `PhotoService` para paginação de dados
+
+Criamos um método `listFromUserPaginated` que recebe também a página de onde queremos buscar as fotos. Importamos o `HttpParams`, que possui o método `append`, onde passamos como parâmetros o nome do *query param* (nesse caso, "page") e o seu valor (nesse caso, o número da página). A API retornará os dados de acordo.
+
+- Criação do `LoadButton` para carregar novas fotos
+- Utilização do `ng-template` e **variáveis de template**
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.

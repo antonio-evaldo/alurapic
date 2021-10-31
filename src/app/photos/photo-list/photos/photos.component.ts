@@ -25,7 +25,6 @@ export class PhotosComponent implements OnChanges {
     for (let i = 0; i < this.photos.length; i += 3) {
       newRows.push(photos.slice(i, i + 3));
     }
-    console.log(newRows);
 
     return newRows;
   }
