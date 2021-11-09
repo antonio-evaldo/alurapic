@@ -14,7 +14,7 @@ import { ErrorsModule } from './errors/errors.module';
     BrowserModule,
     PhotosModule,
     AppRoutingModule,
-    ErrorsModule,
+    ErrorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

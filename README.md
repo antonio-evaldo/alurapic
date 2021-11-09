@@ -113,14 +113,14 @@ Só podemos importar o `BrowserModule` no `app.module.ts`. Esse módulo já incl
 
 ## Módulo 5
 
-- Novo componente para listar photos
+- Novo componente para listar fotos
 - Adequação dos dados recebidos pelo componente
 - Quando a fase `OnInit` não é suficiente
 - A interface `OnChanges`, e como interagir com `SimpleChanges`
 
 ## Módulo 6
 
-- Binding de eventos
+- *Binding* de eventos
 - Implementação de *Pipe*
 - *Resolvers* e como integrá-lo no Roteamento
 - `RxJS` e o `Subject`
@@ -134,6 +134,48 @@ Criamos um método `listFromUserPaginated` que recebe também a página de onde 
 
 - Criação do `LoadButton` para carregar novas fotos
 - Utilização do `ng-template` e **variáveis de template**
+
+## Módulo 7
+
+- Submódulos
+- Integração com Font Awesome
+- Componente *container* e `ng-content`
+- Componentizando o filtro e *output property*
+
+A *output property* é na verdade um *handler* de evento personalizado que será uma propriedade de um componente. No nosso caso, queremos enviar o texto digitado de um input para o elemento pai do componente. No componente filho, que tem o input, declaramos o seguinte:
+
+```ts
+
+@Component({
+  selector: 'ap-filho-component',
+  templateUrl: './filho.component.html'
+})
+export class FilhoComponent implements OnInit {
+  @Output() onTyping = new EventEmitter<string>();
+}
+```
+
+E no template:
+
+```html
+<input
+  type="text"
+  (keyup)="onTyping.emit($event.target.value)"
+>
+```
+
+Assim, no template do componente pai, fazemos assim:
+
+```html
+<ap-filho
+  (onTyping)="text = $event"
+>
+</ap-filho>
+```
+
+Assim, a propriedade `text` do pai receberá o valor que digitarmos no input do filho. A função `emit()` da *output property* `onTyping` dispara o evento personalizado, e o valor passado no parâmetro será o `$event` que escrevemos no template do pai.
+
+- Criando a primeira diretiva
 
 # Alurapic
 

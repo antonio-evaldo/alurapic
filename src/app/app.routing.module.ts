@@ -15,7 +15,7 @@ const routes: Routes = [
     }
   },
   { path: 'p/add', component: PhotoFormComponent },
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
