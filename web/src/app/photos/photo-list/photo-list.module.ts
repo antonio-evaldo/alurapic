@@ -13,10 +13,10 @@ import { DarkenOnHoverModule } from 'src/app/shared/directives/darken-on-hover/d
 @NgModule({
   declarations: [
     PhotoListComponent,
-    PhotosComponent,
-    LoadButtonComponent,
     SearchComponent,
-    FilterByDescription
+    PhotosComponent,
+    FilterByDescription,
+    LoadButtonComponent
   ],
   imports: [
     CommonModule,
