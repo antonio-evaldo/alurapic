@@ -50,6 +50,36 @@ export class SignInComponent implements OnInit {
 
 - descobrindo a plataforma de execução.
 
+## Módulo 2
+
+- como acessar o header de resposta;
+
+Vamos utilizar o `auth.service.ts`. A estratégia será obter dados do header da resposta da requisição de login antes de lidar com o *observable* retornado por `authenticate()`. Vamos importar o método `tap()` de `rxjs/operators`. Depois de `http.post()`, usamos `.pipe(tap())`, e no parâmetro de `tap()` colocamos uma função callback que recebe como parâmetro a resposta da requisição:
+
+```ts
+  return this.http.post(
+    'url_path...',
+    { userName, password },
+    { observe: 'response' }
+  ).pipe(tap(res => {
+    const authToken = res.headers.get('x-access-token');
+    console.log(authToken);
+  }));
+```
+
+E para termos acesso ao `headers` do parâmetro, devemos adicionar o terceiro parâmetro `{ observe: 'response' }` no `post()`.
+
+- armazenamento de token;
+
+Armazenando o token no *localStorage*:
+
+```ts
+localStorage.setItem('authToken', authToken);
+```
+
+- a segurança do token;
+- cabeçalho da nossa aplicação.
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
