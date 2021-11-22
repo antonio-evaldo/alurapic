@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SignInComponent } from './home/sig-in/sign-in.component';
+import { SignInComponent } from './home/sign-in/sign-in.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { AuthGuard } from './core/auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: SignInComponent
+    component: SignInComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'user/:userName',
