@@ -104,6 +104,14 @@ Precisamos utilizar o padrão `Observable` porque queríamos enviar uma informa�
 - a implementação do logout;
 - a diretiva `routerLink`.
 
+## Módulo 4
+
+- criação de um componente de registro;
+- validação de formulário de registro;
+- como criar nosso próprio validador;
+- validando de maneira assíncrona;
+- submissão de dados.
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
