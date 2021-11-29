@@ -112,6 +112,13 @@ Precisamos utilizar o padrão `Observable` porque queríamos enviar uma informa�
 - validando de maneira assíncrona;
 - submissão de dados.
 
+## Módulo 5
+
+- rotas filhas;
+- como *buildar* o projeto;
+- *Lazy loading* e *code splitting*;
+- interceptadores e envio de token.
+
 # Alurapic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
